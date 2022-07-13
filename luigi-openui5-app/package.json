@@ -1,0 +1,24 @@
+{
+  "name": "luigi-example-openui5",
+  "private": true,
+  "version": "0.2.0",
+  "author": "SAP SE",
+  "description": "Luigi with OpenUI5 Demo App",
+  "scripts": {
+    "lint": "eslint webapp",
+    "build": "ui5 build --all",
+    "start": "ui5 serve --open index.html",
+    "serve": "ws --compress -d dist"
+  },
+  "dependencies": {
+    "@luigi-project/client": "^1.22.0",
+    "@luigi-project/core": "^1.22.0",
+    "oidc-client": "^1.11.5",
+    "@luigi-project/plugin-auth-oidc": "^1.23.1"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.14.9",
+    "eslint": "^8.19.0",
+    "local-web-server": "^4.2.1"
+  }
+}

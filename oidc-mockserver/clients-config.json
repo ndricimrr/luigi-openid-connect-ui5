@@ -1,0 +1,29 @@
+[
+  {
+    "ClientId": "authorisation-code-pkce-mock-client",
+    "Description": "Client for PKCE authorisations code",
+    "RequirePkce": true,
+    "RequireClientSecret": false,
+    "AllowedGrantTypes": [
+      "authorization_code"
+    ],
+    "AllowAccessTokensViaBrowser": false,
+    "AutomaticRedirectAfterSignout": true,
+    "RedirectUris": [
+      "http://localhost:8080",
+      "http://localhost:8080/assets/auth-oidc/silent-callback.html"
+    ],
+    "PostLogoutRedirectUris": [
+      "http://localhost:3000/logout.html"
+    ],
+    "AllowedScopes": [
+      "openid",
+      "profile",
+      "email"
+    ],
+    "IdentityTokenLifetime": 3600,
+    "AccessTokenLifetime": 3600,
+    "SignedOutCallbackPath": "http://localhost:8080/logout.html",
+    "SignedOutRedirectUri": "http://localhost:8080/logout.html"
+  }
+]
