@@ -4,12 +4,20 @@ metadata:
 type: application
 framework:
   name: OpenUI5
-  version: "1.80.0"
+  version: "1.104.0"
   libraries:
     - name: sap.f
     - name: sap.m
     - name: sap.ui.core
     - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
+      configuration:
+        extraExts: "xml,json,properties"
+        port: 35729
+        path: "webapp"
 ---
 specVersion: "2.1"
 kind: extension
@@ -18,15 +26,6 @@ metadata:
   name: luigi.shim
 shims:
   configurations:
-    "@luigi-project/client": # name as defined in package.json
-      specVersion: "2.1"
-      type: module
-      metadata:
-        name: luigi-client
-      resources:
-        configuration:
-          paths:
-            /libs/luigi-client/: ""
     "@luigi-project/core":
       specVersion: "2.1"
       type: module
@@ -36,9 +35,6 @@ shims:
         configuration:
           paths:
             /libs/luigi-core/: ""
-    ##        
-    # Resources below specifically needed for authentication with openid-connect
-    #
     "@luigi-project/plugin-auth-oidc":
       specVersion: "2.1"
       type: module
@@ -56,4 +52,4 @@ shims:
       resources:
         configuration:
           paths:
-            /assets/auth-oidc/: ""
+            /assets/auth-oidc/: "dist/"
