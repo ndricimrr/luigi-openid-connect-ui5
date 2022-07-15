@@ -13,12 +13,22 @@
   "dependencies": {
     "@luigi-project/client": "^1.22.0",
     "@luigi-project/core": "^1.22.0",
-    "oidc-client": "^1.11.5",
-    "@luigi-project/plugin-auth-oidc": "^1.23.1"
+    "@luigi-project/plugin-auth-oidc": "^1.23.1",
+    "oidc-client": "^1.11.5"
   },
   "devDependencies": {
     "@ui5/cli": "^2.14.9",
     "eslint": "^8.19.0",
-    "local-web-server": "^4.2.1"
+    "local-web-server": "^4.2.1",
+    "ui5-middleware-livereload": "^0.6.0"
+  },
+  "ui5": {
+    "dependencies": [
+      "@luigi-project/client",
+      "@luigi-project/core",
+      "@luigi-project/plugin-auth-oidc",
+      "oidc-client",
+      "ui5-middleware-livereload"
+    ]
   }
 }
