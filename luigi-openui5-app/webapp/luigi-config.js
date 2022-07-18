@@ -1,5 +1,5 @@
 //you can now use ES6 goodies here
-// importing from npm package directly not possible without bundling
+// // importing from npm package directly not possible without bundling
 // import oidcProvider from '@luigi-project/plugin-auth-oidc';
 
 // using workaround for UMD packages

@@ -10,10 +10,10 @@
     "AllowAccessTokensViaBrowser": false,
     "AutomaticRedirectAfterSignout": true,
     "RedirectUris": [
-      "http://localhost:8080/index.html"
+      "http://localhost:8000/index.html"
     ],
     "PostLogoutRedirectUris": [
-      "http://localhost:8080/logout.html"
+      "http://localhost:8000/logout.html"
     ],
     "AllowedScopes": [
       "openid",
@@ -22,7 +22,7 @@
     ],
     "IdentityTokenLifetime": 3600,
     "AccessTokenLifetime": 3600,
-    "SignedOutCallbackPath": "http://localhost:8080/logout.html",
-    "SignedOutRedirectUri": "http://localhost:8080/logout.html"
+    "SignedOutCallbackPath": "http://localhost:8000/logout.html",
+    "SignedOutRedirectUri": "http://localhost:8000/logout.html"
   }
 ]

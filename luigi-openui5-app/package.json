@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint webapp",
     "build": "ui5 build --all",
-    "start": "ui5 serve --open index.html",
+    "start": "ui5 serve --open index.html --port 8000",
     "serve": "ws --compress -d dist"
   },
   "dependencies": {
