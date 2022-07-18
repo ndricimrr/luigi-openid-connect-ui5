@@ -39,6 +39,15 @@ shims:
         configuration:
           paths:
             /libs/luigi-core/: ""
+    "@luigi-project/client":
+      specVersion: "2.1"
+      type: module
+      metadata:
+        name: luigi-client
+      resources:
+        configuration:
+          paths:
+            /libs/luigi-client/: ""
     "@luigi-project/plugin-auth-oidc":
       specVersion: "2.1"
       type: module

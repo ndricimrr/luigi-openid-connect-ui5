@@ -1,5 +1,8 @@
 //you can now use ES6 goodies here
-import * as oidcProvider from './assets/auth-oidc/plugin.js';
+// importing from npm package directly not possible without bundling
+// import oidcProvider from '@luigi-project/plugin-auth-oidc';
+import './assets/auth-oidc/plugin.js';
+const oidcProvider = window['LuigiPlugin-auth-oidc'];
 
 Luigi.setConfig({
   navigation: {
@@ -70,6 +73,7 @@ Luigi.setConfig({
       response_mode: "fragment", // change between `query` and `fragment`
       scope: 'openid profile email',
       post_logout_redirect_uri: '/logout.html',
+      redirect_uri: '/index.html',
       automaticSilentRenew: true,
       accessTokenExpiringNotificationTime: 60,
     },

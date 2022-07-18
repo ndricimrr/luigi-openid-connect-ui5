@@ -10,8 +10,7 @@
     "AllowAccessTokensViaBrowser": false,
     "AutomaticRedirectAfterSignout": true,
     "RedirectUris": [
-      "http://localhost:8080",
-      "http://localhost:8080/assets/auth-oidc/silent-callback.html"
+      "http://localhost:8080/index.html"
     ],
     "PostLogoutRedirectUris": [
       "http://localhost:8080/logout.html"
