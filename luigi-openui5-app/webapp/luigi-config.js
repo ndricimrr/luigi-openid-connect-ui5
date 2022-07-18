@@ -1,6 +1,8 @@
 //you can now use ES6 goodies here
 // importing from npm package directly not possible without bundling
 // import oidcProvider from '@luigi-project/plugin-auth-oidc';
+
+// using workaround for UMD packages
 import './assets/auth-oidc/plugin.js';
 const oidcProvider = window['LuigiPlugin-auth-oidc'];
 
