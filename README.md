@@ -1,4 +1,3 @@
-# WORK IN PROGRESS !
 # luigi-openid-connect-ui5 
 A simple example setting up a Luigi based microfrontend application with ui5 with openid connect as authentication mechanism
 
@@ -22,7 +21,8 @@ Modify this line accordingly in index.html to treat it as a module so imports ar
 
 Then using the oidc-mockserver provided the config should look like this:
 ```
-import * as oidcProvider from './assets/auth-oidc/plugin.js';
+import './assets/auth-oidc/plugin.js';
+const oidcProvider = window['LuigiPlugin-auth-oidc'];
 
 Luigi.setConfig({
   navigation: {
@@ -40,6 +40,7 @@ Luigi.setConfig({
       response_mode: "fragment", // change between `query` and `fragment`
       scope: 'openid profile email',
       post_logout_redirect_uri: '/logout.html',
+      redirect_uri: '/index.html',
       automaticSilentRenew: true,
       accessTokenExpiringNotificationTime: 60,
     },
@@ -47,5 +48,23 @@ Luigi.setConfig({
   }
 });
 
+```
+
+# Start the Application
+
+## 1. Run the Mock server
+
+
+```
+   cd oidc-mockserver
+   docker-compose up
+```
+
+## 2. Run the Luigi OpenUI5 App 
+
+
+```
+   cd luigi-openui5-app
+   npm run start
 ```
 
