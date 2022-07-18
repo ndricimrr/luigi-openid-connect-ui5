@@ -2,7 +2,7 @@
 // importing from npm package directly not possible without bundling. Need to bundle the luigi-config.js file through UI5 configurations to use this import
 // import oidcProvider from '@luigi-project/plugin-auth-oidc';
 
-// using workaround for UMD packages
+// using import workaround for UMD packages
 import './assets/auth-oidc/plugin.js';
 const oidcProvider = window['LuigiPlugin-auth-oidc'];
 
