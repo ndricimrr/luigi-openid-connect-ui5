@@ -1,4 +1,4 @@
-# luigi-openid-connect-ui5 
+# Luigi UI5 Example with OIDC Authentication
 A simple example setting up a Luigi based microfrontend application with ui5 with openid connect as authentication mechanism
 
 
