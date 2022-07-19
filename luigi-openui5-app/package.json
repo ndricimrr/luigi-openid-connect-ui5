@@ -6,9 +6,10 @@
   "description": "Luigi with OpenUI5 Demo App",
   "scripts": {
     "lint": "eslint webapp",
-    "build": "ui5 build --all",
-    "start": "ui5 serve --open index.html --port 8000",
-    "serve": "ws --compress -d dist"
+    "build": "npm run bundle-luigi-config && ui5 build --all",
+    "start": "npm run bundle-luigi-config && ui5 serve --open index.html --port 8000",
+    "serve": "npm run bundle-luigi-config && ws --compress -d dist",
+    "bundle-luigi-config": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "@luigi-project/client": "^1.22.0",
@@ -20,7 +21,9 @@
     "@ui5/cli": "^2.14.9",
     "eslint": "^8.19.0",
     "local-web-server": "^4.2.1",
-    "ui5-middleware-livereload": "^0.6.0"
+    "ui5-middleware-livereload": "^0.6.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "ui5": {
     "dependencies": [

@@ -1,3 +1,7 @@
+# luigi config webpack generated bundles
+luigi-config.bundle.js
+luigi-config.bundle.js.LICENSE.txt
+
 # Logs
 logs
 *.log
