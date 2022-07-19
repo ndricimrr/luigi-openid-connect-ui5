@@ -12,17 +12,12 @@ The following external libraries are included in the ui5.yaml file as resources
 
 ## Setting the Luigi Auth properties for OIDC configuration
 You need to use the luigi auth plugins in your Luigi Config file.
-Change the javascript config import type to a module to be able to import external libraries there:
 
-Modify this line accordingly in index.html to treat it as a module so imports are allowed:
+You can use webpack to bundle the luigi config file so that you can include packages like plugin-auth-oidc directly in the file.
 
-`<script type="module" src="/luigi-config.js"></script>`
-
-
-Then using the oidc-mockserver provided the config should look like this:
+Then using the oidc-mockserver provided, the luigi config should look like this:
 ```
-import './assets/auth-oidc/plugin.js';
-const oidcProvider = window['LuigiPlugin-auth-oidc'];
+import oidcProvider from '@luigi-project/plugin-auth-oidc';
 
 Luigi.setConfig({
   navigation: {
